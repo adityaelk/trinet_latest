@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+		<title>TimeTracker</title>
+		
+		<!-- CSS  -->
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	</head>
+	<body>
+		<nav class="blue accent-1" role="navigation">
+			<a id="logo-container" href="#" class="brand-logo" style="far-left; padding-left:20px;"><img src="logo_trinet.png" style="max-height:56px;"></a>
+			<div class="nav-wrapper container">
+				<div>
+					<ul class="left hide-on-med-and-down">
+						<li><a href="home.html">Home</a></li>
+						<li><a href="day.html">Day</a></li>
+						<li><a href="week.html">Week</a></li>
+						<li><a href="2weeks.html">2 Weeks</a></li>
+						<li><a href="overview.html">Overview</a></li>
+						<li><a href="create_user.html">Create User</a></li>
+						<li><a href="create_job.html">Create Job</a></li>
+						<li><a href="allocate.html">Allocate</a></li>
+					</ul>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="#">Help</a></li>
+						<li><a href="index.html">Logout</a></li>
+					</ul>
+					<ul id="nav-mobile" class="side-nav">
+						<li><a href="home.html"><i class="left mdi-action-home"></i>Home</a></li>
+						<li><a href="day.html"><i class="left mdi-action-today"></i>Day</a></li>
+						<li><a href="week.html"><i class="left mdi-action-view-week"></i>Week</a></li>
+                        <li><a href="2weeks.html"><i class="left mdi-action-view-week"></i>2 Weeks</a></li>
+						<li><a href="overview.html"><i class="left mdi-action-pageview"></i>Overview</a></li>
+						<li><a href="create_user.html"><i class="left mdi-social-person-add"></i>Create User</a></li>
+						<li><a href="create_job.html"><i class="left mdi-action-grade"></i>Create Job</a></li>
+						<li><a href="allocate.html"><i class="left mdi-action-accessibility"></i>Allocate</a></li>
+						<li><a href="index.html"><i class="left mdi-action-settings-power"></i>Logout</a></li>
+					</ul>
+					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu mobilemenu"></i></a>
+				</div>
+			</div>
+		</nav>
+		<main>
+			<div class="container">
+				<div class="section" id="overview">
+					
+					<div class="row s12">
+						<div class="col m2 l2">&nbsp;</div>
+						<div class="col m8 s12" style="background-color:white;">
+							<div class="row">
+								
+								
+								<div class="col s12"><div class="heading"><h6 style="color:#0077be;"><a href="overview.html">Overview > </a>John Smith > Week</h6></div>
+									
+								</div>
+								<div id="" class="col s12">
+									<ul class="collapsible popout" data-collapsible="accordion">
+										<li class="weekheading">
+											<div class="collapsible-item" style="overflow:hidden;">
+												<div class="col s12">
+													<div class="col s7">
+														<div class="col s12 m7 l7">Week (1 Jun - 5 Jun)</div>
+														<div class="col s12 m4 l5">72 hrs</div>
+													</div>
+													<div class="col s5"><ul class="pagination aligned">
+														<li class="disabled"><a href="#!"><i class="mdi-navigation-chevron-left"></i></a></li>
+														<li class="waves-effect"><a href="#!"><i class="mdi-navigation-chevron-right"></i></a></li>
+													</ul></div>
+													
+												</div>					
+											</li>
+											<li>
+												<div class="collapsible-item" style="overflow:hidden;">
+													<div class="row col s12">
+														<div class="col s7">
+															<div class="col s12 m7 l7">Monday <br>1 Jun-15 Jun </div>
+															<div class="col s12 m5 l5">8 hrs</div>
+														</div>
+														<div class="col s3 orange-text">Approved</div>
+														<div class="col s1 right"><a href="overview_day.html"><i class="tiny mdi-hardware-keyboard-arrow-right"></i></a></div>
+														</div>
+														</div>	
+														
+														</li>
+														
+														<li>
+														<div class="collapsible-item" style="overflow:hidden;">
+														<div class="row col s12">
+														<div class="col s7">
+														<div class="col s12 m7 l7">Tuesday <br>2 Jun-15 Jun </div>
+														<div class="col s12 m5 l5">7 hrs</div>
+														</div>
+														<div class="col s3 orange-text">Approved</div>
+														<div class="col s1 right"><a href="overview_day.html"><i class="tiny mdi-hardware-keyboard-arrow-right"></i></a></div>
+														</div>
+														</div>					
+														</li>
+														<li>
+														<div class="collapsible-item" style="overflow:hidden;">
+														<div class="row col s12">
+														<div class="col s7">
+														<div class="col s12 m7 l7">Wednesday <br>3 Jun-15 Jun </div>
+														<div class="col s12 m5 l5">8 hrs</div>
+														</div>
+														<div class="col s3 orange-text">Pending</div>
+														<div class="col s1 right"><a href="overview_day.html"><i class="tiny mdi-hardware-keyboard-arrow-right"></i></a></div>
+														</div>
+														</div>					
+														</li>
+														<li>
+														<div class="collapsible-item" style="overflow:hidden;">
+														<div class="row col s12">
+														<div class="col s7">
+														<div class="col s12 m7 l7">Thursday <br>4 Jun-15 Jun </div>
+														<div class="col s12 m5 l5">8 hrs</div>
+														</div>
+														<div class="col s3 orange-text">Approved</div>
+														<div class="col s1 right"><a href="overview_day.html"><i class="tiny mdi-hardware-keyboard-arrow-right"></i></a></div>
+														</div>
+														</div>					
+														</li>
+														<li>
+														<div class="collapsible-item" style="overflow:hidden;">
+														<div class="row col s12">
+														<div class="col s7">
+														<div class="col s12 m7 l7">Friday <br>5 Jun-15 Jun </div>
+														<div class="col s12 m5 l5">8 hrs</div>
+														</div>
+														<div class="col s3 orange-text">Approved</div>
+														<div class="col s1 right"><a href="overview_day.html"><i class="tiny mdi-hardware-keyboard-arrow-right"></i></a></div>
+														</div>
+														</div>					
+														</li>
+														
+														
+														</ul>
+														</div>
+														
+														</div>
+														</div>
+														<div class="col m2 l2"></div>
+														</div>
+														</div>
+														</div>
+														</main>
+														
+														<footer class="page-footer blue accent-1">
+														<div class="container">
+														<div class="row center">
+														<div class="col s12">
+														<h6 class="">Trinet &copy; 2015</h6>
+														</div>
+														</div>
+														</div>
+														</footer>
+														
+														
+														<!--  Scripts-->
+														<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+														<script src="js/materialize.js"></script>
+														<script src="js/init.js"></script>
+														
+														</body>
+														</html>
+																												

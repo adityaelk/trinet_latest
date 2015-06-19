@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+		<title>TimeTracker</title>
+		
+		<!-- CSS  -->
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	</head>
+	<body>
+		<nav class="blue accent-1" role="navigation">
+			<a id="logo-container" href="#" class="brand-logo" style="far-left; padding-left:20px;"><img src="logo_trinet.png" style="max-height:56px;"></a>
+			<div class="nav-wrapper container">
+				<div>
+					<ul class="left hide-on-med-and-down">
+						<li><a href="home.html">Home</a></li>
+						<li><a href="day.html">Day</a></li>
+						<li><a href="week.html">Week</a></li>
+						<li><a href="2weeks.html">2 Weeks</a></li>
+						<li><a href="overview.html">Overview</a></li>
+						<li><a href="create_user.html">Create User</a></li>
+						<li><a href="create_job.html">Create Job</a></li>
+						<li><a href="allocate.html">Allocate</a></li>
+					</ul>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="#">Help</a></li>
+						<li><a href="index.html">Logout</a></li>
+					</ul>
+					<ul id="nav-mobile" class="side-nav">
+						<li><a href="home.html"><i class="left mdi-action-home"></i>Home</a></li>
+						<li><a href="day.html"><i class="left mdi-action-today"></i>Day</a></li>
+						<li><a href="week.html"><i class="left mdi-action-view-week"></i>Week</a></li>
+                        <li><a href="2weeks.html"><i class="left mdi-action-view-week"></i>2 Weeks</a></li>
+						<li><a href="overview.html"><i class="left mdi-action-pageview"></i>Overview</a></li>
+						<li><a href="create_user.html"><i class="left mdi-social-person-add"></i>Create User</a></li>
+						<li><a href="create_job.html"><i class="left mdi-action-grade"></i>Create Job</a></li>
+						<li><a href="allocate.html"><i class="left mdi-action-accessibility"></i>Allocate</a></li>
+						<li><a href="index.html"><i class="left mdi-action-settings-power"></i>Logout</a></li>
+					</ul>
+					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu mobilemenu"></i></a>
+				</div>
+			</div>
+		</nav>
+		<main>
+		<div class="container">
+			<div class="section" id="day" >
+				<div class="row s12">
+					<div class="col m2 l2">&nbsp;</div>
+					<div class="col m8 s12" >
+                     <div class="heading"><h5 class="orange-text">Today's Hours</h5></div>
+                      <div class="heading"><h6 class="orange-text">9 Hrs  (Total)</h6></div>
+					<ul class="collapsible popout blue accent-1" data-collapsible="accordion">
+						<li>
+							<div class="collapsible-header" style="overflow:hidden;">
+								<div class="row col s12">
+									<div class="col s2"><i class="tiny mdi-toggle-check-box" style="color:green;"></i></div>
+									<div class="col s5">Title of Job 4</div>
+									<div class="col s3 orange-text">2 Hrs</div>
+									<div class="col s2"><i class="tiny mdi-hardware-keyboard-arrow-down"></i></div>
+								</div>
+							</div>
+							<div class="collapsible-body" style="background-color:white">
+								<div class="row col s12">
+									<div class="col s2">&nbsp;</div>
+									<div class="col s5">Job ID : J01234</div>
+									<div class="col s5"><label>Current Entry</label></div>
+								</div>
+								<div class="row" id="tm">
+									<div class="col s1">&nbsp;</div>
+									<div class="col m4 s4">
+										<label><h6>Start Time</h6></label>
+										<input type="time" value="08:20">
+									</div>
+									<div class="col m4 s4">
+										<label><h6>End Time</h6></label>
+										<input type="time" value="13:56">
+									</div>
+									<div class="col m3 s3 center">
+										<label><h6>Revised</h6></label>
+										<label><h6>Time</h6></label>
+										<h6 class="orange-text">2.5 Hrs</h6>
+									</div>
+								</div>
+								<div class="row center">
+									<div class="col m5 s12"><a class="waves-effect waves-light btn blue">Edit Time</a></div>
+									<div class="col m1 s12">&nbsp;</div>
+									<div class="col m6 s12"><a class="waves-effect waves-light btn blue">Send for Approval</a></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="collapsible-header" style="overflow:hidden;">
+								<div class="row col s12">
+									<div class="col s2"><i class="tiny mdi-alert-error" style="color:orange;"></i></div>
+									<div class="col s5">Title of Job 1</div>
+									<div class="col s3 orange-text">3 Hrs</div>
+									<div class="col s2"><i class="tiny mdi-maps-directions-walk"></i></div>
+								</div>
+							</div>
+							<div class="collapsible-body" style="background-color:white">
+							</div>
+						</li>
+						<li>
+							<div class="collapsible-header" style="overflow:hidden;">
+								<div class="row col s12">
+									<div class="col s2"><i class="tiny mdi-toggle-check-box" style="color:green;"></i></div>
+									<div class="col s5">Title of Job 2</div>
+									<div class="col s3 orange-text">4 Hrs</div>
+									<div class="col s2"><i class="tiny mdi-hardware-keyboard-arrow-down"></i></div>
+								</div>
+							</div>
+							<div class="collapsible-body" style="background-color:white">
+							</div>
+						</li>
+					</ul>
+					</div>
+					<div class="col m2 l2"></div>
+				</div>
+			</div>
+		</div>
+		</main>
+		<footer class="page-footer blue accent-1">
+			<div class="container">
+				<div class="row center">
+					<div class="col s12">
+						<h6 class="">Trinet &copy; 2015</h6>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		
+		<!--  Scripts-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="js/init.js"></script>
+		
+	</body>
+</html>

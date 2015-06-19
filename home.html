@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+		<title>TimeTracker</title>
+		
+		<!-- CSS  -->
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	</head>
+	<body>
+		<nav class="blue accent-1" role="navigation">
+			<a id="logo-container" href="#" class="brand-logo" style="far-left; padding-left:20px;"><img src="logo_trinet.png" style="max-height:56px;"></a>
+			<div class="nav-wrapper container">
+				<div>
+					<ul class="left hide-on-med-and-down">
+						<li><a href="home.html">Home</a></li>
+						<li><a href="day.html">Day</a></li>
+						<li><a href="week.html">Week</a></li>
+						<li><a href="2weeks.html">2 Weeks</a></li>
+						<li><a href="overview.html">Overview</a></li>
+						<li><a href="create_user.html">Create User</a></li>
+						<li><a href="create_job.html">Create Job</a></li>
+						<li><a href="allocate.html">Allocate</a></li>
+					</ul>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="#">Help</a></li>
+						<li><a href="index.html">Logout</a></li>
+					</ul>
+					<ul id="nav-mobile" class="side-nav">
+						<li><a href="home.html"><i class="left mdi-action-home"></i>Home</a></li>
+						<li><a href="day.html"><i class="left mdi-action-today"></i>Day</a></li>
+						<li><a href="week.html"><i class="left mdi-action-view-week"></i>Week</a></li>
+                        <li><a href="2weeks.html"><i class="left mdi-action-view-week"></i>2 Weeks</a></li>
+						<li><a href="overview.html"><i class="left mdi-action-pageview"></i>Overview</a></li>
+						<li><a href="create_user.html"><i class="left mdi-social-person-add"></i>Create User</a></li>
+						<li><a href="create_job.html"><i class="left mdi-action-grade"></i>Create Job</a></li>
+						<li><a href="allocate.html"><i class="left mdi-action-accessibility"></i>Allocate</a></li>
+						<li><a href="index.html"><i class="left mdi-action-settings-power"></i>Logout</a></li>
+					</ul>
+					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu mobilemenu"></i></a>
+				</div>
+			</div>
+		</nav>
+		<main>
+		<div class="container">
+			<div class="section" id="home" >
+				
+				<div class="row s12">
+					<div class="col m2 l2">&nbsp;</div>
+					<div class="col m8 s12">
+                    <div class="heading"><h5 class="orange-text">Pick a job</h5></div>
+                   <!-- <div class="heading"><h6 class="orange-text">whatcha doin ?</h6></div>-->
+						<ul class="collapsible popout blue accent-1" data-collapsible="accordion">
+							<li>
+								<div class="collapsible-header">
+									Title of Job 1
+									<i class="right mdi-maps-directions-walk"></i>
+								</div>
+								<div class="collapsible-body">
+									<div class="card center-align">
+										<div class="card-content">
+											<div class="row orange-text">
+												<h5>Title of Job</h5>
+												<h6>Job ID : J00112</h6>
+												<hr style="width:100%;" />
+											</div>
+											<div class="row s12">
+												<div class="col s6">
+													<div class="center-align">
+														<div class="punching">
+															<a ng-class="{'waves-effect waves-light teal': !punchInObject.inTime, 'disabled': punchInObject.inTime}" class="btn-floating btn-large" ng-click="punchIn(punchInObject)">
+																<i class="mdi-action-done blue"></i>
+															</a>
+															<div class="clearfix"></div>
+															<span class="title">Punch In</span>
+															<div class="card-action">
+																<h5 ng-if="punchInObject.inTime">08:20</h5>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col s6">
+													<div class="center-align">
+														<div class="punching">
+															<a ng-class="{'waves-effect waves-light teal': (punchInObject.inTime && !punchInObject.outTime), 'disabled': !punchInObject.inTime || (punchInObject.inTime && punchInObject.outTime)}" class="btn-floating btn-large" ng-click="punchOut(punchInObject)">
+																<i class="mdi-action-done-all blue"></i>
+															</a>
+															<div class="clearfix"></div>
+															<span class="title">Punch Out</span>
+															<div class="card-action">
+																<h5 ng-if="punchInObject.outTime">13:53</h5>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row blue-text">
+												<hr style="width:100%;" />
+												<h6>Going for a break ?</h6>
+												<h6>You can start and end your break time</h6>
+												<a href="#" id="break-button" class="btn-large waves-effect waves-light orange">Start Break</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header">
+									Title of Job 2
+									<i class="right mdi-action-lock"></i>
+								</div>
+								<div class="collapsible-body">
+									<div class="card center-align">
+										<div class="card-content">
+											<div class="row orange-text">
+												<h5>Title of Job</h5>
+												<h6>Job ID : J00112</h6>
+												<hr style="width:100%;" />
+											</div>
+											<div class="row s12">
+												<div class="col s6">
+													<div class="center-align">
+														<div class="punching">
+															<a ng-class="{'waves-effect waves-light teal': !punchInObject.inTime, 'disabled': punchInObject.inTime}" class="btn-floating btn-large" ng-click="punchIn(punchInObject)">
+																<i class="mdi-action-done blue"></i>
+															</a>
+															<div class="clearfix"></div>
+															<span class="title">Punch In</span>
+															<div class="card-action">
+																<h5 ng-if="punchInObject.inTime">08:20</h5>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col s6">
+													<div class="center-align">
+														<div class="punching">
+															<a ng-class="{'waves-effect waves-light teal': (punchInObject.inTime && !punchInObject.outTime), 'disabled': !punchInObject.inTime || (punchInObject.inTime && punchInObject.outTime)}" class="btn-floating btn-large" ng-click="punchOut(punchInObject)">
+																<i class="mdi-action-done-all blue"></i>
+															</a>
+															<div class="clearfix"></div>
+															<span class="title">Punch Out</span>
+															<div class="card-action">
+																<h5 ng-if="punchInObject.outTime">13:53</h5>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row blue-text">
+												<hr style="width:100%;" />
+												<h6>You are currenlty on a break ?</h6>
+												<h6>You can end your break time</h6>
+												<!--<a href="#" id="break-button" class="btn-medium waves-effect waves-light blue"><h6 style="color:white;">End Break</h6></a>-->
+                                                <a href="#" id="break-button" class="btn-large waves-effect waves-light orange">End Break</a>
+												<h6>Break Time Elapsed : 00:23 </h6>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header">
+									Title of Job 3
+									<i class="right mdi-action-lock"></i>
+								</div>
+								<div class="collapsible-body">
+									<div class="card center-align">
+										<div class="card-content">
+											<div class="row orange-text">
+												<h5>Title of Job</h5>
+												<h6>Job ID : J00112</h6>
+												<hr style="width:100%;" />
+											</div>
+											<div class="row s12">
+												<div class="col s6">
+													<div class="center-align">
+														<div class="punching">
+															<a ng-class="{'waves-effect waves-light teal': !punchInObject.inTime, 'disabled': punchInObject.inTime}" class="btn-floating btn-large" ng-click="punchIn(punchInObject)">
+																<i class="mdi-action-done blue"></i>
+															</a>
+															<div class="clearfix"></div>
+															<span class="title">Punch In</span>
+															<div class="card-action">
+																<h5 ng-if="punchInObject.inTime">08:20</h5>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col s6">
+													<div class="center-align">
+														<div class="punching">
+															<a ng-class="{'waves-effect waves-light teal': (punchInObject.inTime && !punchInObject.outTime), 'disabled': !punchInObject.inTime || (punchInObject.inTime && punchInObject.outTime)}" class="btn-floating btn-large" ng-click="punchOut(punchInObject)">
+																<i class="mdi-action-done-all blue"></i>
+															</a>
+															<div class="clearfix"></div>
+															<span class="title">Punch Out</span>
+															<div class="card-action">
+																<h5 ng-if="punchInObject.outTime">13:53</h5>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row blue-text">
+												<hr style="width:100%;" />
+												<h6>Going for a break ?</h6>
+												<h6>You can start and end your break time</h6>
+												<!--<a href="#" id="break-button" class="btn-medium waves-effect waves-light blue"><h6 style="color:white;">Start Break</h6></a>-->
+                                                <a class="btn-large waves-effect waves-light orange" id="break-button" href="#">Start Break</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header">
+									Title of Job 4
+									<i class="right mdi-action-lock"></i>
+								</div>
+								<div class="collapsible-body">
+									<div class="card center-align">
+										<div class="card-content">
+											<div class="row orange-text">
+												<h5>Title of Job</h5>
+												<h6>Job ID : J00112</h6>
+												<hr style="width:100%;" />
+											</div>
+											<div class="row s12">
+												<div class="col s6">
+													<div class="center-align">
+														<div class="punching">
+															<a ng-class="{'waves-effect waves-light teal': !punchInObject.inTime, 'disabled': punchInObject.inTime}" class="btn-floating btn-large" ng-click="punchIn(punchInObject)">
+																<i class="mdi-action-done blue"></i>
+															</a>
+															<div class="clearfix"></div>
+															<span class="title">Punch In</span>
+															<div class="card-action">
+																<h5 ng-if="punchInObject.inTime">08:20</h5>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col s6">
+													<div class="center-align">
+														<div class="punching">
+															<a ng-class="{'waves-effect waves-light teal': (punchInObject.inTime && !punchInObject.outTime), 'disabled': !punchInObject.inTime || (punchInObject.inTime && punchInObject.outTime)}" class="btn-floating btn-large" ng-click="punchOut(punchInObject)">
+																<i class="mdi-action-done-all blue"></i>
+															</a>
+															<div class="clearfix"></div>
+															<span class="title">Punch Out</span>
+															<div class="card-action">
+																<h5 ng-if="punchInObject.outTime">13:53</h5>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row blue-text">
+												<hr style="width:100%;" />
+												<h6>You are currently on a break</h6>
+												<h6>You can end your break time</h6>
+												<!--<a href="#" id="break-button" class="btn-medium waves-effect waves-light blue"><h6 style="color:white;">End Break</h6></a>-->
+                                                <a class="btn-large waves-effect waves-light orange" id="break-button" href="#">End Break</a>
+												<h6>Break Time Elapsed : 00:23 </h6>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="col m2 l2"></div>
+				</div>
+			</div>
+		</div>
+		</main>
+		
+		<footer class="page-footer blue accent-1">
+			<div class="container">
+				<div class="row center">
+					<div class="col s12">
+						<h6 class="">Trinet &copy; 2015</h6>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		
+		<!--  Scripts-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="js/init.js"></script>
+		
+	</body>
+</html>
